@@ -1,0 +1,51 @@
+<template>
+  <div class="">
+    <Header ref="header"></Header>
+    <Swiper></Swiper>
+    <Content></Content>
+    <Foot></Foot>
+  </div>
+</template>
+
+<script>
+//这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
+//例如：import 《组件名称》 from '《组件路径》';
+import Header from '../../components/Header.vue'
+import Swiper from '../../components/Swiper.vue'
+import Content from '../../components/Content.vue'
+import Foot from '../../components/Foot.vue'
+
+export default {
+  //import引入的组件需要注入到对象中才能使用
+
+  components: {
+    Header,
+    Swiper,
+    Content,
+    Foot,
+  },
+  data() {
+    //这里存放数据
+    return {
+    };
+  },
+  //监听属性 类似于data概念
+  computed: {},
+  //监控data中的数据变化
+  watch: {},
+  //方法集合
+  methods: {
+    getInput(value) {
+      this.input = value;
+      // console.log(this.input);
+    },
+  },
+  //生命周期 - 创建完成（可以访问当前this实例）
+  created() {},
+  //生命周期 - 挂载完成（可以访问DOM元素）
+  mounted() {
+  },
+};
+</script>
+<style lang='less' scoped>
+</style>
